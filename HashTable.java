@@ -11,11 +11,12 @@ public class HashTable<T> {
 		this.useDoubleHash = useDoubleHash;
 	}
 	
-	public void insert (HashObject<T> hashObject) throws Exception
+	public void insert (HashObject<T> hashObject)
 	{
 		if (numKeys >= table.length)
 		{
-			throw new Exception();
+			System.out.println("Table is full");
+			return;
 		}
 		
 		T key = hashObject.getObject();
@@ -30,10 +31,11 @@ public class HashTable<T> {
 			if(table[index] == null)
 			{
 				table[index] = hashObject;
+				numKeys++;
 				break;
 			}
 			
-			if (table[index].hashCode() == key.hashCode())
+			if (table[index].getObject().hashCode() == key.hashCode())
 			{
 				if (table[index].equals(hashObject))
 				{

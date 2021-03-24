@@ -5,6 +5,11 @@ public class HashObject<T> {
 	int duplicateCount;
 	int probeCount;
 	
+	public HashObject (T genericObject)
+	{
+		this.genericObject = genericObject;
+	}
+	
 	T getObject ()
 	{
 		return genericObject;
@@ -33,6 +38,15 @@ public class HashObject<T> {
 	void incrementProbeCount ()
 	{
 		probeCount++;
+	}
+	
+	boolean equals (HashObject<T> hashObject2)
+	{
+		if(genericObject.equals(hashObject2.getObject()))
+		{
+			return true;
+		}
+		return false;
 	}
 	
 }
