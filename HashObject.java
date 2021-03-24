@@ -5,32 +5,32 @@ public class HashObject<T> {
 	int duplicateCount;
 	int probeCount;
 	
-	T getObject()
+	T getObject ()
 	{
 		return genericObject;
 	}
 	
-	void setObject(T newObject)
+	void setObject (T newObject)
 	{
 		genericObject = newObject;
 	}
 	
-	int getDuplicateCount()
+	int getDuplicateCount ()
 	{
 		return duplicateCount;
 	}
 	
-	void incrementDuplicateCount()
+	void incrementDuplicateCount ()
 	{
 		duplicateCount++;
 	}
 	
-	int getProbeCount()
+	int getProbeCount ()
 	{
 		return probeCount;
 	}
 	
-	void incrementProbeCount()
+	void incrementProbeCount ()
 	{
 		probeCount++;
 	}
