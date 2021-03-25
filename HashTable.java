@@ -11,12 +11,13 @@ public class HashTable<T> {
 		this.useDoubleHash = useDoubleHash;
 	}
 	
-	public void insert (HashObject<T> hashObject)
+	//returns true if inserted item was a duplicate
+	public boolean insert (HashObject<T> hashObject)
 	{
 		if (numKeys >= table.length)
 		{
 			System.out.println("Table is full");
-			return;
+			return false;
 		}
 		
 		T key = hashObject.getObject();
@@ -32,7 +33,7 @@ public class HashTable<T> {
 			{
 				table[index] = hashObject;
 				numKeys++;
-				break;
+				return false;
 			}
 			
 			if (table[index].getObject().hashCode() == key.hashCode())
@@ -40,7 +41,7 @@ public class HashTable<T> {
 				if (table[index].equals(hashObject))
 				{
 					table[index].incrementDuplicateCount();
-					break;
+					return true;
 				}
 			}
 			

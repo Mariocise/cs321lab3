@@ -1,9 +1,9 @@
 
 public class HashObject<T> {
 
-	T genericObject;
-	int duplicateCount;
-	int probeCount;
+	private T genericObject;
+	private int duplicateCount;
+	private int probeCount;
 	
 	public HashObject (T genericObject)
 	{
