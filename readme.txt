@@ -1,6 +1,6 @@
 Sam Humrichouse - Programming Assignment #2
 
-Github link: https://github.com/Mariocise/cs321lab2
+Github link: https://github.com/Mariocise/cs321lab3
 
 ---
 
@@ -13,21 +13,18 @@ Installation instructions:
 
 From the directory containing all source files, compile the
 driver class (and all dependencies) with the command:
-$ javac CPUScheduling.java
+$ javac HashTest.java
 
 ---
 
 Usage:
 
 Run the compiled class file with the command:
-$ java CPUScheduling <maxProcessTime> <maxPriorityLevel> <timeToIncrementPriority> <simulationTime> <processArrivalRate>
+$ java HashTest <input type> <load factor> [<debug level>]
      
-maxProcessTime: Largest possible time units required to finish a process.
-maxPriorityLevel: Highest possible priority for a process.
-timeToIncrementPriority: if a process didn't get any CPU time for this many time units, 
-	the process's priority will increase by one
-simulationTime: The total time units for the simulation
-processArrivalRate: How likely it is for a process to be generated on each time unit
+<input type>: type of input (from java.util.Random, System.currentTimeMillis() or word-list.
+<load factor>: value between 0 and 1 - ratio of elements to table size.
+[<debug level>]: 0 to print summary, 1 to print summary and hash tables.
 
 Console output will give the results after the program finishes.
 ---
