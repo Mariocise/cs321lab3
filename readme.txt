@@ -1,11 +1,11 @@
-Sam Humrichouse - Programming Assignment #2
+Sam Humrichouse - Programming Assignment #3
 
 Github link: https://github.com/Mariocise/cs321lab3
 
 ---
 
 Description: 
-This project simulates scheduling processes for a CPU.
+This project tests the functionality of a hash table.
 
 ---
 
