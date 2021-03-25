@@ -1,3 +1,10 @@
+/**
+ * A table that uses hashing for indexing
+ * 
+ * @author Sam Humrichouse
+ *
+ * @param <T> - Type of elements to be held
+ */
 
 public class HashTable<T> {
 
@@ -57,6 +64,7 @@ public class HashTable<T> {
 		}
 	}
 	
+	//get the array
 	public HashObject<T>[] getTable ()
 	{
 		return table.clone();
